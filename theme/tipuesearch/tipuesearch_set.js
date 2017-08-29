@@ -35,7 +35,7 @@ function showGetResult()
         async: false,
         success: function(xml) {
             $(xml).find('url').each(function(){
-                var loc = $(this).find('loc').text();
+                var loc = $(this).find('url').text();
                 if ($.inArray(loc, exclude_pages) < 0) {
                     result.push(loc);
                 }
